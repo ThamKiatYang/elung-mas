@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elung Mas | Handmade Crochet Animal Keychains</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Quicksand & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFDF9',
+                        beige: '#F5EFE6',
+                        sand: '#EDE0D4',
+                        caramel: '#9C6644',
+                        espresso: '#3D2C2E',
+                        peach: '#E07A5F',
+                        sage: '#81B29A',
+                        mustard: '#F2CC8F',
+                        darkBadge: '#16110E'
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(61, 44, 46, 0.08)',
+                        'card': '0 8px 24px -4px rgba(156, 102, 68, 0.14)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFFDF9;
+            color: #3D2C2E;
+            font-family: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Subtle knitted yarn stitch background texture */
+        .bg-knit-pattern {
+            background-image: radial-gradient(#E6CCB2 1.25px, transparent 1.25px), radial-gradient(#E6CCB2 1.25px, #FFFDF9 1.25px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: gentleFloat 4s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5EFE6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #DDB892;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9C6644;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-peach/20 selection:text-espresso">
+
+    <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+    <div class="bg-espresso text-cream text-xs sm:text-sm py-2 px-4 text-center font-semibold tracking-wide">
+        <span data-i18n="announcement">🧶 100% Handmade Milk Cotton Yarn (4–5 cm) • Campus Meetup & COD in UNIMAS, Kota Samarahan, Sarawak 🇲🇾</span>
+    </div>
+
+    <!-- ==================== STICKY NAVBAR ==================== -->
+    <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b border-sand/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-2">
+            
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-darkBadge p-0.5 shadow-md flex items-center justify-center overflow-hidden border-2 border-[#F6D5A8] group-hover:scale-105 transition-transform">
+                    <img id="navLogoImg" src="" alt="Elung Mas Logo" class="hidden w-full h-full object-cover rounded-full">
+                    <svg id="navLogoSvg" viewBox="0 0 100 100" class="w-full h-full">
+                        <circle cx="50" cy="50" r="46" fill="#16110E" stroke="#F6D5A8" stroke-width="2.5"/>
+                        <circle cx="50" cy="50" r="41" fill="none" stroke="#F6D5A8" stroke-width="1.2"/>
+                        <ellipse cx="50" cy="46" rx="18" ry="15" fill="#A47148"/>
+                        <circle cx="38" cy="34" r="4" fill="#6F4518"/>
+                        <circle cx="62" cy="34" r="4" fill="#6F4518"/>
+                        <path d="M26 54 Q50 66 74 54 L68 68 Q50 75 32 68 Z" fill="#BC8A5F"/>
+                        <circle cx="50" cy="81" r="3" fill="#F6D5A8"/>
+                        <circle cx="45.5" cy="77.5" r="1.4" fill="#F6D5A8"/>
+                        <circle cx="50" cy="76" r="1.4" fill="#F6D5A8"/>
+                        <circle cx="54.5" cy="77.5" r="1.4" fill="#F6D5A8"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-bold text-xl sm:text-2xl tracking-tight text-espresso block leading-none">Elung Mas</span>
+                    <span class="text-[11px] font-bold text-caramel tracking-wider uppercase" data-i18n="navSubtitle">Handmade Crochet</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 font-bold text-sm text-espresso/80">
+                <a href="#catalog" class="hover:text-peach transition-colors" data-i18n="navCatalog">Keychains</a>
+                <a href="#blindbox" class="hover:text-peach transition-colors flex items-center gap-1" data-i18n="navBlindBox">🎁 Blind Box</a>
+                <a href="#custom" class="hover:text-peach transition-colors" data-i18n="navCustom">Custom Order</a>
+                <a href="#about" class="hover:text-peach transition-colors" data-i18n="navAbout">Story & Care</a>
+                <a href="#contact" class="hover:text-peach transition-colors" data-i18n="navContact">Contact</a>
+            </nav>
+
+            <!-- Action Controls: EN/BM Toggle & Bag -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-full bg-beige hover:bg-sand text-espresso text-xs sm:text-sm font-bold border border-caramel/25 transition-all flex items-center gap-1.5 cursor-pointer" title="Switch English / Bahasa Melayu">
+                    <i data-lucide="globe" class="w-4 h-4 text-caramel"></i>
+                    <span id="langLabel">BM</span>
+                </button>
+
+                <button onclick="toggleCart(true)" class="relative px-3.5 py-2 rounded-full bg-peach hover:bg-peach/90 text-white font-bold text-sm shadow-sm transition-all flex items-center gap-2 cursor-pointer">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline" data-i18n="navBag">Bag</span>
+                    <span id="cartBadge" class="bg-espresso text-cream text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative bg-knit-pattern pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-sand/60 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Left Hero Copy -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sage/15 text-espresso font-bold text-xs sm:text-sm border border-sage/35">
+                    <span>🧶</span>
+                    <span data-i18n="heroBadge">Handcrafted Stitch by Stitch (4–5 cm) in UNIMAS, Kota Samarahan, Sarawak</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-espresso leading-tight">
+                    <span data-i18n="heroTitle1">Cute Knitted Friends</span><br>
+                    <span class="text-peach" data-i18n="heroTitle2">For Your Everyday Carry</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-espresso/80 max-w-xl mx-auto lg:mx-0 leading-relaxed" data-i18n="heroDesc">
+                    Welcome to <strong>Elung Mas</strong>! Every 4–5 cm crochet animal keychain is lovingly handmade with soft milk cotton yarn—all fixed at <strong>RM 8.00</strong>, plus our <strong>RM 22.00 Mystery Blind Box</strong>!
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                    <a href="#catalog" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-espresso hover:bg-caramel text-cream font-bold text-base shadow-soft transition-all flex items-center justify-center gap-2">
+                        <span data-i18n="heroCtaPrimary">Shop 6 Animal Keychains</span>
+                        <i data-lucide="arrow-down-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#blindbox" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-peach hover:bg-peach/90 text-white font-bold text-base shadow-soft transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="gift" class="w-4 h-4"></i>
+                        <span data-i18n="heroCtaSecondary">Blind Box (RM 22)</span>
+                    </a>
+                </div>
+
+                <!-- Trust Highlights -->
+                <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs sm:text-sm font-bold text-caramel">
+                    <div class="flex items-center gap-1.5">
+                        <i data-lucide="ruler" class="w-4 h-4 text-peach"></i>
+                        <span data-i18n="trust1">Compact 4–5 cm Size</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i data-lucide="tag" class="w-4 h-4 text-peach"></i>
+                        <span data-i18n="trust2">All Fixed at RM 8</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-peach"></i>
+                        <span data-i18n="trust3">Mystery Blind Box RM 22</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Circular Brand Mascot Emblem -->
+            <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                <div class="relative animate-float">
+                    <div class="absolute -inset-4 rounded-full bg-mustard/30 blur-2xl"></div>
+                    
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-darkBadge p-2 shadow-2xl border-4 border-[#F6D5A8] flex items-center justify-center overflow-hidden">
+                        <img id="heroLogoImg" src="" alt="Elung Mas Official Avatar" class="hidden w-full h-full object-cover rounded-full">
+
+                        <!-- Double-line Circular Emblem SVG (Plain Capybara without Orange) -->
+                        <svg id="heroLogoSvg" viewBox="0 0 300 300" class="w-full h-full">
+                            <circle cx="150" cy="150" r="142" fill="#16110E" stroke="#F6D5A8" stroke-width="4.5"/>
+                            <circle cx="150" cy="150" r="133" fill="none" stroke="#F6D5A8" stroke-width="2"/>
+                            
+                            <!-- Hearts & Sparkles -->
+                            <path d="M46 168 C42 162, 34 166, 38 174 C41 179, 46 183, 46 183 C46 183, 51 179, 54 174 C58 166, 50 162, 46 168 Z" fill="none" stroke="#F6D5A8" stroke-width="2.2"/>
+                            <path d="M254 168 C250 162, 242 166, 246 174 C249 179, 254 183, 254 183 C254 183, 259 179, 262 174 C266 166, 258 162, 254 168 Z" fill="none" stroke="#F6D5A8" stroke-width="2.2"/>
+                            <line x1="192" y1="95" x2="200" y2="87" stroke="#F6D5A8" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="197" y1="104" x2="207" y2="100" stroke="#F6D5A8" stroke-width="2.5" stroke-linecap="round"/>
+
+                            <!-- Left: Knitted Ginger Cat -->
+                            <g transform="translate(52, 88)">
+                                <path d="M8 58 Q-6 52 -2 40 Q2 32 12 42" fill="#E68A3E" stroke="#B55D1C" stroke-width="2"/>
+                                <polygon points="12,24 18,4 32,18" fill="#E68A3E" stroke="#B55D1C" stroke-width="1.5"/>
+                                <polygon points="16,21 20,9 28,17" fill="#F4A29E"/>
+                                <polygon points="44,18 56,4 62,24" fill="#E68A3E" stroke="#B55D1C" stroke-width="1.5"/>
+                                <polygon points="47,17 54,9 58,21" fill="#F4A29E"/>
+                                <ellipse cx="37" cy="44" rx="28" ry="26" fill="#E68A3E" stroke="#B55D1C" stroke-width="1.5"/>
+                                <path d="M32 19 L34 26 M38 18 L38 27 M44 19 L42 26" stroke="#B55D1C" stroke-width="2.2" stroke-linecap="round"/>
+                                <circle cx="26" cy="43" r="3.5" fill="#231712"/>
+                                <circle cx="48" cy="43" r="3.5" fill="#231712"/>
+                                <circle cx="20" cy="49" r="4.5" fill="#F28482" opacity="0.8"/>
+                                <circle cx="54" cy="49" r="4.5" fill="#F28482" opacity="0.8"/>
+                                <path d="M33 47 Q37 51 41 47" fill="none" stroke="#231712" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Center: Knitted Capybara (No Orange) -->
+                            <g transform="translate(106, 76)">
+                                <circle cx="18" cy="24" r="8" fill="#6F4518"/>
+                                <circle cx="70" cy="24" r="8" fill="#6F4518"/>
+                                <rect x="10" y="18" width="68" height="68" rx="30" fill="#A47148" stroke="#7F4F24" stroke-width="1.8"/>
+                                <ellipse cx="44" cy="48" rx="17" ry="13" fill="#6F4518"/>
+                                <path d="M44 43 L44 52 M39 43 Q44 46 49 43" fill="none" stroke="#231712" stroke-width="2.2" stroke-linecap="round"/>
+                                <circle cx="24" cy="42" r="3.5" fill="#231712"/>
+                                <circle cx="64" cy="42" r="3.5" fill="#231712"/>
+                                <circle cx="19" cy="50" r="5" fill="#F28482" opacity="0.8"/>
+                                <circle cx="69" cy="50" r="5" fill="#F28482" opacity="0.8"/>
+                            </g>
+
+                            <!-- Right: Knitted Puppy -->
+                            <g transform="translate(182, 95)">
+                                <ellipse cx="10" cy="34" rx="9" ry="18" fill="#8B5A2B" transform="rotate(15 10 34)"/>
+                                <ellipse cx="58" cy="34" rx="9" ry="18" fill="#8B5A2B" transform="rotate(-15 58 34)"/>
+                                <ellipse cx="34" cy="36" rx="25" ry="23" fill="#FAF0E6" stroke="#D5BDAF" stroke-width="1.5"/>
+                                <circle cx="24" cy="35" r="3.5" fill="#231712"/>
+                                <circle cx="44" cy="35" r="3.5" fill="#231712"/>
+                                <circle cx="18" cy="42" r="4.5" fill="#F28482" opacity="0.8"/>
+                                <circle cx="50" cy="42" r="4.5" fill="#F28482" opacity="0.8"/>
+                                <circle cx="34" cy="38" r="2.5" fill="#231712"/>
+                                <path d="M30 42 Q34 45 38 42" fill="none" stroke="#231712" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Woven Basket & Ribbon -->
+                            <path d="M62 152 Q150 174 238 152 L222 188 Q150 205 78 188 Z" fill="#B07D4F" stroke="#7F4F24" stroke-width="2"/>
+                            <path d="M72 168 Q150 186 228 168" fill="none" stroke="#7F4F24" stroke-width="2" stroke-dasharray="6,4"/>
+                            <path d="M150 164 C132 150, 122 172, 146 168 C136 178, 130 188, 136 190 L150 170 L164 190 C170 188, 164 178, 154 168 C178 172, 168 150, 150 164 Z" fill="#582F0E"/>
+                            <circle cx="150" cy="165" r="5" fill="#7F4F24"/>
+
+                            <!-- Name Banner Pill -->
+                            <rect x="48" y="192" width="204" height="72" rx="36" fill="#16110E" stroke="#F6D5A8" stroke-width="3.5"/>
+                            <text x="150" y="232" text-anchor="middle" fill="#F6D5A8" font-family="Quicksand, sans-serif" font-weight="700" font-size="31" letter-spacing="0.5">Elung Mas</text>
+                            
+                            <!-- Paw Print & Side Lines -->
+                            <line x1="104" y1="248" x2="128" y2="248" stroke="#F6D5A8" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="172" y1="248" x2="196" y2="248" stroke="#F6D5A8" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="150" cy="251" r="5" fill="#F6D5A8"/>
+                            <circle cx="142" cy="244" r="2.3" fill="#F6D5A8"/>
+                            <circle cx="147.5" cy="241" r="2.3" fill="#F6D5A8"/>
+                            <circle cx="153" cy="241" r="2.3" fill="#F6D5A8"/>
+                            <circle cx="158" cy="244" r="2.3" fill="#F6D5A8"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Optional Owner Logo Uploader Button -->
+                <label class="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-caramel hover:text-peach cursor-pointer transition-colors bg-cream/90 px-3.5 py-1.5 rounded-full border border-sand shadow-xs">
+                    <i data-lucide="image-plus" class="w-3.5 h-3.5"></i>
+                    <span data-i18n="uploadAvatarBtn">Preview Your Saved Avatar Image</span>
+                    <input type="file" accept="image/*" class="hidden" onchange="handleLogoUpload(event)">
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCT CATALOG SECTION ==================== -->
+    <section id="catalog" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-peach" data-i18n="catalogTag">Our Crochet Collection</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-espresso mt-1" data-i18n="catalogTitle">6 Adorable Animal Keychains</h2>
+                <p class="text-sm sm:text-base text-espresso/75 mt-2 max-w-xl" data-i18n="catalogSubtitle">
+                    Every keychain is handcrafted in a cute <strong>4–5 cm</strong> pocket size for <strong>RM 8.00</strong>. Pick your favorite buddy and add it to your bag to send your order straight to WhatsApp.
+                </p>
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="flex flex-wrap gap-2">
+                <button onclick="setFilter('all')" id="filter-all" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-espresso text-cream transition-all cursor-pointer" data-i18n="filterAll">All (6) • RM 8</button>
+                <button onclick="setFilter('bestseller')" id="filter-bestseller" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-beige text-espresso hover:bg-sand transition-all cursor-pointer" data-i18n="filterBest">🔥 Bestseller</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            <!-- Rendered by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ==================== MYSTERY BLIND BOX SECTION (RM 22) ==================== -->
+    <section id="blindbox" class="py-16 sm:py-24 bg-gradient-to-br from-mustard/25 via-beige/80 to-peach/15 border-y border-sand">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-cream rounded-3xl p-6 sm:p-10 shadow-soft border-2 border-mustard/70 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Mystery Capybara with Mandarin Orange Showcase -->
+                <div class="lg:col-span-5 flex flex-col items-center text-center">
+                    <div class="relative w-full max-w-xs bg-gradient-to-b from-beige to-mustard/25 rounded-3xl p-6 border border-mustard/60 shadow-inner">
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-espresso text-[#F6D5A8] text-[11px] font-bold tracking-wide flex items-center gap-1">
+                            <span>✨</span> <span data-i18n="bbSecretBadge">Secret Edition</span>
+                        </span>
+                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-peach text-white text-xs font-bold">
+                            4–5 cm
+                        </span>
+
+                        <!-- Secret Edition Capybara WITH Mandarin Orange SVG -->
+                        <div class="w-44 h-44 mx-auto mt-3 animate-float">
+                            <svg viewBox="0 0 200 200" class="w-full h-full">
+                                <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                                <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                                <circle cx="62" cy="74" r="13" fill="#6F4518"/>
+                                <circle cx="138" cy="74" r="13" fill="#6F4518"/>
+                                <rect x="46" y="64" width="108" height="96" rx="44" fill="#A47148" stroke="#7F4F24" stroke-width="2.5"/>
+                                <path d="M58 92 Q100 100 142 92 M54 114 Q100 122 146 114 M60 136 Q100 144 140 136" fill="none" stroke="#7F4F24" stroke-width="2" stroke-dasharray="6,6" opacity="0.6"/>
+                                <ellipse cx="100" cy="112" rx="28" ry="21" fill="#6F4518"/>
+                                <path d="M100 104 L100 119 M91 105 Q100 110 109 105" fill="none" stroke="#231712" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="68" cy="102" r="5" fill="#231712"/>
+                                <circle cx="66.5" cy="100.5" r="1.5" fill="#FFF"/>
+                                <circle cx="132" cy="102" r="5" fill="#231712"/>
+                                <circle cx="130.5" cy="100.5" r="1.5" fill="#FFF"/>
+                                <ellipse cx="60" cy="115" rx="8" ry="5" fill="#F28482" opacity="0.75"/>
+                                <ellipse cx="140" cy="115" rx="8" ry="5" fill="#F28482" opacity="0.75"/>
+                                <!-- Exclusive Mandarin Orange on Head -->
+                                <ellipse cx="100" cy="54" rx="20" ry="15" fill="#F77F00" stroke="#D65A00" stroke-width="2"/>
+                                <path d="M100 40 Q112 31 122 40 Q110 47 100 40 Z" fill="#6A994E"/>
+                                <!-- Sparkles -->
+                                <path d="M32 68 L35 75 L42 78 L35 81 L32 88 L29 81 L22 78 L29 75 Z" fill="#F77F00" opacity="0.85"/>
+                                <path d="M168 58 L170 63 L175 65 L170 67 L168 72 L166 67 L161 65 L166 63 Z" fill="#F77F00" opacity="0.85"/>
+                            </svg>
+                        </div>
+
+                        <p class="text-xs font-bold text-espresso mt-2" data-i18n="bbSecretName">Mystery Capybara with Mandarin Orange</p>
+                        <p class="text-[11px] font-semibold text-caramel mt-0.5" data-i18n="bbSecretNote">(Blind Box Exclusive — Not Sold Separately!)</p>
+                    </div>
+                </div>
+
+                <!-- Right: Blind Box Offer & Next-Order RM 5.99 Perk -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full bg-peach/15 text-peach font-bold text-xs flex items-center gap-1.5">
+                            <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                            <span data-i18n="bbTag">Surprise 3-in-1 Pack</span>
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-espresso text-cream font-bold text-xs">
+                            RM 22.00 / Pack
+                        </span>
+                    </div>
+
+                    <h2 class="text-2xl sm:text-3xl font-bold text-espresso" data-i18n="bbTitle">Elung Mas Mystery Blind Box (3 Keychains)</h2>
+                    
+                    <p class="text-sm text-espresso/80 leading-relaxed" data-i18n="bbDesc">
+                        Love surprises? Each Blind Box pack contains <strong>3 handmade 4–5 cm crochet keychains</strong> (worth RM 24+ if bought individually) for only <strong>RM 22.00</strong>!
+                    </p>
+
+                    <!-- Highlighted Secret Pull Reward Box -->
+                    <div class="bg-beige/80 rounded-2xl p-4 border border-caramel/25 space-y-2">
+                        <div class="flex items-center gap-2 font-bold text-sm text-espresso">
+                            <span>🍊</span>
+                            <span data-i18n="bbRewardTitle">Unbox the Secret Mystery Capybara & Win a Perk!</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-espresso/80 leading-relaxed" data-i18n="bbRewardDesc">
+                            If you pull the exclusive <strong>Capybara with Mandarin Orange</strong> (different from our regular Chill Brown Capybara), your <strong>next order</strong> gets <strong>1 single keychain for only RM 5.99</strong> (instead of RM 8.00 — limited to 1 item)!
+                        </p>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                        <button onclick="addBlindBoxToBag()" class="px-6 py-3.5 rounded-2xl bg-peach hover:bg-peach/90 text-white font-bold text-sm shadow-soft transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span data-i18n="bbAddBtn">Add Blind Box Pack (RM 22.00)</span>
+                        </button>
+                        <span class="text-xs font-semibold text-caramel text-center sm:text-left" data-i18n="bbPackInfo">
+                            3 pcs (4–5 cm) inside • Chance to pull Secret Edition!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOM ORDER BUILDER ==================== -->
+    <section id="custom" class="py-16 sm:py-24 bg-beige/40 border-b border-sand">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-cream rounded-3xl p-6 sm:p-10 shadow-soft border border-sand grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peach/15 text-peach font-bold text-xs">
+                        <i data-lucide="wand-2" class="w-3.5 h-3.5"></i>
+                        <span data-i18n="customTag">Made Just For You</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-espresso" data-i18n="customTitle">Custom Colors & Gift Sets</h2>
+                    <p class="text-sm text-espresso/80 leading-relaxed" data-i18n="customDesc">
+                        Want a specific yarn color (e.g. matcha frog, calico cat, or pastel bear) or a gift box for your UNIMAS friend? Customize your request below!
+                    </p>
+                    <ul class="space-y-2 text-xs sm:text-sm font-semibold text-caramel">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sage"></i> <span data-i18n="customPoint1">Soft anti-pilling milk cotton yarn (4–5 cm standard)</span></li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sage"></i> <span data-i18n="customPoint2">Price depends on size — confirmed by seller upon order</span></li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sage"></i> <span data-i18n="customPoint3">Optional gift box + handwritten note available</span></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-7 bg-beige/50 rounded-2xl p-5 sm:p-6 border border-sand space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-espresso mb-1.5" data-i18n="customLabelAnimal">Choose Base Animal</label>
+                            <select id="customBaseSelect" class="w-full px-3.5 py-2.5 rounded-xl bg-cream border border-sand text-sm font-bold text-espresso focus:outline-none focus:border-peach">
+                                <option value="Chill Brown Capybara">Chill Brown Capybara</option>
+                                <option value="Ginger Tabby Cat">Ginger Tabby Cat</option>
+                                <option value="Honey Teddy Bear">Honey Teddy Bear</option>
+                                <option value="Chubby Pink Piggy">Chubby Pink Piggy</option>
+                                <option value="Happy Green Frog">Happy Green Frog</option>
+                                <option value="Little Yellow Chick">Little Yellow Chick</option>
+                                <option value="Other / Custom Design">Other / Custom Design</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-espresso mb-1.5" data-i18n="customLabelSize">Preferred Size</label>
+                            <select id="customSizeSelect" class="w-full px-3.5 py-2.5 rounded-xl bg-cream border border-sand text-sm font-bold text-espresso focus:outline-none focus:border-peach">
+                                <option value="Standard (4–5 cm)" data-en="Standard (4–5 cm)" data-bm="Biasa / Standard (4–5 cm)" selected>Standard (4–5 cm)</option>
+                                <option value="Medium (6–8 cm)" data-en="Medium (6–8 cm)" data-bm="Sederhana (6–8 cm)">Medium (6–8 cm)</option>
+                                <option value="Large (9–12 cm)" data-en="Large (9–12 cm)" data-bm="Besar (9–12 cm)">Large (9–12 cm)</option>
+                                <option value="Custom Size (Describe below)" data-en="Custom Size (Describe below)" data-bm="Saiz Khas (Nyatakan di bawah)">Custom Size (Describe below)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-espresso mb-1.5" data-i18n="customLabelQty">Quantity</label>
+                            <input type="number" id="customQtyInput" value="1" min="1" max="50" class="w-full px-3.5 py-2.5 rounded-xl bg-cream border border-sand text-sm font-bold text-espresso focus:outline-none focus:border-peach">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold text-espresso mb-1.5" data-i18n="customLabelColor">Preferred Yarn Colors / Special Notes</label>
+                            <input type="text" id="customColorInput" placeholder="e.g. Cream white Honey Teddy Bear with pink bow..." class="w-full px-3.5 py-2.5 rounded-xl bg-cream border border-sand text-sm text-espresso focus:outline-none focus:border-peach">
+                        </div>
+                    </div>
+
+                    <label class="flex items-center gap-2.5 cursor-pointer select-none pt-1">
+                        <input type="checkbox" id="customGiftBoxCheck" class="w-4 h-4 accent-peach rounded">
+                        <span class="text-xs sm:text-sm font-bold text-espresso" data-i18n="customGiftLabel">Add Gift Box + Handwritten Wish Card</span>
+                    </label>
+
+                    <p class="text-[11px] font-semibold text-caramel bg-cream/80 px-3 py-2 rounded-xl border border-sand" data-i18n="customPriceNote">
+                        💡 Custom pricing depends on size & complexity — exact price will be confirmed by seller via WhatsApp after you send your order.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <button onclick="addCustomToBag()" class="py-3 px-4 rounded-xl bg-espresso hover:bg-caramel text-cream font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            <span data-i18n="customAddBtn">Add Custom to Bag</span>
+                        </button>
+                        <button onclick="sendCustomWhatsApp()" class="py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span data-i18n="customWaBtn">Ask on WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STORY & CARE SECTION ==================== -->
+    <section id="about" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-peach" data-i18n="aboutTag">Our Story & Care</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-espresso mt-1" data-i18n="aboutTitle">Why Elung Mas?</h2>
+            <p class="text-sm sm:text-base text-espresso/75 mt-2" data-i18n="aboutDesc">
+                Started in UNIMAS, Kota Samarahan, Sarawak, Elung Mas brings cozy 4–5 cm handmade crochet companions at student-friendly prices.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-cream rounded-3xl p-6 border border-sand shadow-soft space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-peach/15 text-peach flex items-center justify-center">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-espresso" data-i18n="card1Title">100% Hand-Crocheted</h3>
+                <p class="text-sm text-espresso/75 leading-relaxed" data-i18n="card1Desc">
+                    No mass-produced factory items—every stitch, blush cheek, and tiny ear is carefully hand-sewn with love in a neat 4–5 cm size.
+                </p>
+            </div>
+
+            <div class="bg-cream rounded-3xl p-6 border border-sand shadow-soft space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-sage/15 text-sage flex items-center justify-center">
+                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-espresso" data-i18n="card2Title">UNIMAS Campus Meetup</h3>
+                <p class="text-sm text-espresso/75 leading-relaxed" data-i18n="card2Desc">
+                    Free COD / campus meetup around UNIMAS & Kota Samarahan! Pick up your order easily at your Kolej or Student Pavilion.
+                </p>
+            </div>
+
+            <div class="bg-cream rounded-3xl p-6 border border-sand shadow-soft space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-mustard/30 text-caramel flex items-center justify-center">
+                    <i data-lucide="droplets" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-espresso" data-i18n="card3Title">Easy Care Guide</h3>
+                <p class="text-sm text-espresso/75 leading-relaxed" data-i18n="card3Desc">
+                    Gently hand-wash in cool water with mild soap if dusty, squeeze softly with a towel, and air-dry away from direct sun.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT & FOOTER ==================== -->
+    <footer id="contact" class="bg-espresso text-cream pt-14 pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-cream/15">
+            
+            <div class="md:col-span-6 space-y-3">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl font-bold text-[#F6D5A8]">Elung Mas</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-cream/10 text-xs font-semibold text-[#F6D5A8]">Handmade Crochet</span>
+                </div>
+                <p class="text-sm text-cream/80 max-w-md leading-relaxed" data-i18n="footerDesc">
+                    Handmade 4–5 cm crochet animal keychains & Mystery Blind Boxes crafted with love in UNIMAS, Kota Samarahan, Sarawak. Order directly via WhatsApp for quick replies!
+                </p>
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                    <button onclick="openDirectWhatsApp()" class="px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm transition-all flex items-center gap-2 cursor-pointer">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>WhatsApp: 016-802 8303</span>
+                    </button>
+                    <button onclick="copyPhoneNumber()" class="px-4 py-2.5 rounded-full bg-cream/10 hover:bg-cream/20 text-cream font-bold text-xs sm:text-sm transition-all flex items-center gap-1.5 cursor-pointer">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span data-i18n="copyBtn">Copy Number</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 space-y-2.5 text-sm">
+                <h4 class="font-bold text-[#F6D5A8] uppercase tracking-wider text-xs" data-i18n="footerLinksTitle">Quick Links</h4>
+                <ul class="space-y-2 text-cream/80">
+                    <li><a href="#catalog" class="hover:text-[#F6D5A8] transition-colors" data-i18n="navCatalog">Keychains</a></li>
+                    <li><a href="#blindbox" class="hover:text-[#F6D5A8] transition-colors" data-i18n="navBlindBox">🎁 Blind Box</a></li>
+                    <li><a href="#custom" class="hover:text-[#F6D5A8] transition-colors" data-i18n="navCustom">Custom Order</a></li>
+                    <li><a href="#about" class="hover:text-[#F6D5A8] transition-colors" data-i18n="navAbout">Story & Care</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-3 space-y-2.5 text-sm">
+                <h4 class="font-bold text-[#F6D5A8] uppercase tracking-wider text-xs" data-i18n="footerLocationTitle">Campus Pickup / COD</h4>
+                <p class="text-cream/80 text-xs sm:text-sm leading-relaxed" data-i18n="footerLocationDesc">
+                    📍 UNIMAS, Kota Samarahan, Sarawak<br>
+                    🤝 Free COD / Meetup around campus & Kota Samarahan
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 gap-2">
+            <p>© 2026 Elung Mas Handmade Crochet. All rights reserved.</p>
+            <p>UNIMAS, Kota Samarahan, Sarawak • WhatsApp 016-802 8303</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SLIDE-OVER SHOPPING BAG DRAWER ==================== -->
+    <div id="cartOverlay" onclick="toggleCart(false)" class="fixed inset-0 bg-espresso/50 backdrop-blur-xs z-50 hidden transition-opacity"></div>
+    
+    <aside id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-cream z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-sand">
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-sand flex items-center justify-between bg-beige/60">
+            <div class="flex items-center gap-2.5">
+                <i data-lucide="shopping-bag" class="w-5 h-5 text-peach"></i>
+                <h3 class="font-bold text-lg text-espresso" data-i18n="cartTitle">Your Crochet Bag</h3>
+            </div>
+            <button onclick="toggleCart(false)" class="w-8 h-8 rounded-full bg-cream hover:bg-sand flex items-center justify-center text-espresso cursor-pointer">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items Scrollable Area -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-5 space-y-3">
+            <!-- Rendered by JS -->
+        </div>
+
+        <!-- Checkout Details & Direct WhatsApp Order Button -->
+        <div class="p-5 border-t border-sand bg-beige/40 space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <input type="text" id="customerNameInput" placeholder="Your Name / Nama" class="px-3 py-2 rounded-xl bg-cream border border-sand text-xs font-semibold text-espresso focus:outline-none focus:border-peach">
+                <input type="text" id="customerNoteInput" placeholder="Kolej / Meetup Spot / Note" class="px-3 py-2 rounded-xl bg-cream border border-sand text-xs font-semibold text-espresso focus:outline-none focus:border-peach">
+            </div>
+
+            <!-- Mystery Capybara Reward Toggle (RM 5.99 on 1 single item) -->
+            <label class="flex items-start gap-2.5 bg-mustard/25 border border-mustard/70 rounded-xl p-2.5 cursor-pointer select-none">
+                <input type="checkbox" id="mysteryRewardCheck" onchange="renderCart()" class="w-4 h-4 mt-0.5 accent-peach rounded shrink-0">
+                <div class="text-[11px] leading-snug">
+                    <span class="font-bold text-espresso block" data-i18n="rewardCheckTitle">🍊 Mystery Capybara Winner Reward (RM 5.99)</span>
+                    <span class="text-caramel font-semibold" data-i18n="rewardCheckDesc">Apply RM 5.99 promo price to 1 regular keychain (save RM 2.01; verify photo via WhatsApp).</span>
+                </div>
+            </label>
+
+            <div>
+                <label class="block text-[11px] font-bold text-caramel mb-1" data-i18n="deliveryLabel">Pickup / Meetup Method</label>
+                <select id="deliveryMethodSelect" onchange="renderCart()" class="w-full px-3 py-2 rounded-xl bg-cream border border-sand text-xs font-bold text-espresso focus:outline-none focus:border-peach">
+                    <option value="UNIMAS Campus Meetup (Free)" data-fee="0" data-en="UNIMAS Campus Meetup, Kota Samarahan (Free)" data-bm="COD / Jumpa di UNIMAS, Kota Samarahan (Percuma)">UNIMAS Campus Meetup, Kota Samarahan (Free)</option>
+                    <option value="Kota Samarahan Area COD (Free)" data-fee="0" data-en="Kota Samarahan Area COD (Free)" data-bm="COD Kawasan Kota Samarahan (Percuma)">Kota Samarahan Area COD (Free)</option>
+                </select>
+            </div>
+
+            <div class="space-y-1 text-xs pt-1 border-t border-sand/80">
+                <div class="flex justify-between text-espresso/75 font-semibold">
+                    <span data-i18n="subtotalLabel">Items Subtotal</span>
+                    <span id="cartSubtotalDisplay">RM 0.00</span>
+                </div>
+                <div id="rewardDiscountRow" class="hidden flex justify-between text-sage font-bold">
+                    <span data-i18n="rewardDiscountLabel">🍊 Mystery Capybara Promo (1 item @ RM 5.99)</span>
+                    <span>-RM 2.01</span>
+                </div>
+                <div class="flex justify-between text-espresso/75 font-semibold">
+                    <span data-i18n="shippingLabel">Meetup Fee</span>
+                    <span id="cartShippingDisplay">RM 0.00 (Free)</span>
+                </div>
+                <div class="flex justify-between text-base font-bold text-espresso pt-1">
+                    <span data-i18n="totalLabel">Total</span>
+                    <span id="cartTotalDisplay" class="text-peach">RM 0.00</span>
+                </div>
+            </div>
+
+            <a id="whatsappCheckoutLink" href="https://wa.me/60168028303" target="_blank" onclick="return checkoutViaWhatsApp(event)" class="w-full py-3.5 px-4 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span data-i18n="checkoutWaBtn">Order via WhatsApp (016-802 8303)</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-espresso text-cream px-5 py-3 rounded-full shadow-xl text-xs sm:text-sm font-bold flex items-center gap-2 opacity-0 pointer-events-none transition-opacity duration-300">
+        <span>🧶</span>
+        <span id="toastMsg">Added to bag!</span>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        const WHATSAPP_NUMBER = '60168028303';
+        const DISPLAY_PHONE = '0168028303';
+
+        let currentLang = 'en';
+        let currentFilter = 'all';
+
+        // Bilingual Dictionary (English & Bahasa Melayu)
+        const i18n = {
+            en: {
+                announcement: '🧶 100% Handmade Milk Cotton Yarn (4–5 cm) • Campus Meetup & COD in UNIMAS, Kota Samarahan, Sarawak 🇲🇾',
+                navSubtitle: 'Handmade Crochet',
+                navCatalog: 'Keychains',
+                navBlindBox: '🎁 Blind Box',
+                navCustom: 'Custom Order',
+                navAbout: 'Story & Care',
+                navContact: 'Contact',
+                navBag: 'Bag',
+                heroBadge: 'Handcrafted Stitch by Stitch (4–5 cm) in UNIMAS, Kota Samarahan, Sarawak',
+                heroTitle1: 'Cute Knitted Friends',
+                heroTitle2: 'For Your Everyday Carry',
+                heroDesc: 'Welcome to <strong>Elung Mas</strong>! Every 4–5 cm crochet animal keychain is lovingly handmade with soft milk cotton yarn—all fixed at <strong>RM 8.00</strong>, plus our <strong>RM 22.00 Mystery Blind Box</strong>!',
+                heroCtaPrimary: 'Shop 6 Animal Keychains',
+                heroCtaSecondary: 'Blind Box (RM 22)',
+                trust1: 'Compact 4–5 cm Size',
+                trust2: 'All Fixed at RM 8',
+                trust3: 'Mystery Blind Box RM 22',
+                uploadAvatarBtn: 'Preview Your Saved Avatar Image',
+                catalogTag: 'Our Crochet Collection',
+                catalogTitle: '6 Adorable Animal Keychains',
+                catalogSubtitle: 'Every keychain is handcrafted in a cute <strong>4–5 cm</strong> pocket size for <strong>RM 8.00</strong>. Pick your favorite buddy and add it to your bag to send your order straight to WhatsApp.',
+                filterAll: 'All (6) • RM 8',
+                filterBest: '🔥 Bestseller',
+                bestseller: 'Bestseller',
+                specMaterial: 'Soft Milk Cotton • 4–5 cm',
+                addToBag: 'Add to Bag',
+                bbSecretBadge: 'Secret Edition',
+                bbSecretName: 'Mystery Capybara with Mandarin Orange',
+                bbSecretNote: '(Blind Box Exclusive — Not Sold Separately!)',
+                bbTag: 'Surprise 3-in-1 Pack',
+                bbTitle: 'Elung Mas Mystery Blind Box (3 Keychains)',
+                bbDesc: 'Love surprises? Each Blind Box pack contains <strong>3 handmade 4–5 cm crochet keychains</strong> (worth RM 24+ if bought individually) for only <strong>RM 22.00</strong>!',
+                bbRewardTitle: 'Unbox the Secret Mystery Capybara & Win a Perk!',
+                bbRewardDesc: 'If you pull the exclusive <strong>Capybara with Mandarin Orange</strong> (different from our regular Chill Brown Capybara), your <strong>next order</strong> gets <strong>1 single keychain for only RM 5.99</strong> (instead of RM 8.00 — limited to 1 item)!',
+                bbAddBtn: 'Add Blind Box Pack (RM 22.00)',
+                bbPackInfo: '3 pcs (4–5 cm) inside • Chance to pull Secret Edition!',
+                customTag: 'Made Just For You',
+                customTitle: 'Custom Colors & Gift Sets',
+                customDesc: 'Want a specific yarn color (e.g. matcha frog, calico cat, or pastel bear) or a gift box for your UNIMAS friend? Customize your request below!',
+                customPoint1: 'Soft anti-pilling milk cotton yarn (4–5 cm standard)',
+                customPoint2: 'Price depends on size — confirmed by seller upon order',
+                customPoint3: 'Optional gift box + handwritten note available',
+                customLabelAnimal: 'Choose Base Animal',
+                customLabelSize: 'Preferred Size',
+                customLabelQty: 'Quantity',
+                customLabelColor: 'Preferred Yarn Colors / Special Notes',
+                customGiftLabel: 'Add Gift Box + Handwritten Wish Card',
+                customPriceNote: '💡 Custom pricing depends on size & complexity — exact price will be confirmed by seller via WhatsApp after you send your order.',
+                customAddBtn: 'Add Custom to Bag',
+                customWaBtn: 'Ask on WhatsApp',
+                aboutTag: 'Our Story & Care',
+                aboutTitle: 'Why Elung Mas?',
+                aboutDesc: 'Started in UNIMAS, Kota Samarahan, Sarawak, Elung Mas brings cozy 4–5 cm handmade crochet companions at student-friendly prices.',
+                card1Title: '100% Hand-Crocheted',
+                card1Desc: 'No mass-produced factory items—every stitch, blush cheek, and tiny ear is carefully hand-sewn with love in a neat 4–5 cm size.',
+                card2Title: 'UNIMAS Campus Meetup',
+                card2Desc: 'Free COD / campus meetup around UNIMAS & Kota Samarahan! Pick up your order easily at your Kolej or Student Pavilion.',
+                card3Title: 'Easy Care Guide',
+                card3Desc: 'Gently hand-wash in cool water with mild soap if dusty, squeeze softly with a towel, and air-dry away from direct sun.',
+                footerDesc: 'Handmade 4–5 cm crochet animal keychains & Mystery Blind Boxes crafted with love in UNIMAS, Kota Samarahan, Sarawak. Order directly via WhatsApp for quick replies!',
+                copyBtn: 'Copy Number',
+                footerLinksTitle: 'Quick Links',
+                footerLocationTitle: 'Campus Pickup / COD',
+                footerLocationDesc: '📍 UNIMAS, Kota Samarahan, Sarawak<br>🤝 Free COD / Meetup around campus & Kota Samarahan',
+                cartTitle: 'Your Crochet Bag',
+                cartEmptyTitle: 'Your bag is still empty!',
+                cartEmptyDesc: 'Pick a cute 4–5 cm keychain or a Mystery Blind Box pack (RM 22) to get started.',
+                rewardCheckTitle: '🍊 Mystery Capybara Winner Reward (RM 5.99)',
+                rewardCheckDesc: 'Apply RM 5.99 promo price to 1 regular keychain (save RM 2.01; verify photo via WhatsApp).',
+                rewardDiscountLabel: '🍊 Mystery Capybara Promo (1 item @ RM 5.99)',
+                deliveryLabel: 'Pickup / Meetup Method',
+                subtotalLabel: 'Items Subtotal',
+                shippingLabel: 'Meetup Fee',
+                totalLabel: 'Total',
+                checkoutWaBtn: 'Order via WhatsApp (016-802 8303)'
+            },
+            bm: {
+                announcement: '🧶 100% Benang Milk Cotton Buatan Tangan (4–5 cm) • COD Kampus UNIMAS, Kota Samarahan, Sarawak 🇲🇾',
+                navSubtitle: 'Kait Buatan Tangan',
+                navCatalog: 'Keychain',
+                navBlindBox: '🎁 Blind Box',
+                navCustom: 'Tempahan Khas',
+                navAbout: 'Kisah & Penjagaan',
+                navContact: 'Hubungi',
+                navBag: 'Beg',
+                heroBadge: 'Dikait Teliti Satu per Satu (4–5 cm) di UNIMAS, Kota Samarahan, Sarawak',
+                heroTitle1: 'Rakan Kait Comel',
+                heroTitle2: 'Untuk Kunci & Beg Anda',
+                heroDesc: 'Selamat datang ke <strong>Elung Mas</strong>! Setiap keychain haiwan bersaiz <strong>4–5 cm</strong> dikait dengan benang milk cotton lembut pada harga tetap <strong>RM 8.00</strong>, serta <strong>Mystery Blind Box RM 22.00</strong>!',
+                heroCtaPrimary: 'Lihat 6 Koleksi Haiwan',
+                heroCtaSecondary: 'Blind Box (RM 22)',
+                trust1: 'Saiz Comel 4–5 cm',
+                trust2: 'Harga Tetap RM 8',
+                trust3: 'Mystery Blind Box RM 22',
+                uploadAvatarBtn: 'Pratonton Gambar Logo Anda',
+                catalogTag: 'Koleksi Kait Kami',
+                catalogTitle: '6 Keychain Haiwan Comel',
+                catalogSubtitle: 'Setiap keychain bersaiz poket <strong>4–5 cm</strong> dengan harga tetap <strong>RM 8.00</strong>. Pilih haiwan kegemaran anda dan masukkan ke dalam beg untuk terus hantar pesanan ke WhatsApp.',
+                filterAll: 'Semua (6) • RM 8',
+                filterBest: '🔥 Paling Laris',
+                bestseller: 'Paling Laris',
+                specMaterial: 'Milk Cotton Lembut • 4–5 cm',
+                addToBag: 'Tambah ke Beg',
+                bbSecretBadge: 'Edisi Rahsia',
+                bbSecretName: 'Capybara Misteri dengan Buah Oren',
+                bbSecretNote: '(Eksklusif Blind Box — Tidak Dijual Berasingan!)',
+                bbTag: 'Pek Kejutan 3-dalam-1',
+                bbTitle: 'Mystery Blind Box Elung Mas (3 Keychain)',
+                bbDesc: 'Suka kejutan? Setiap pek Blind Box mengandungi <strong>3 keychain kait buatan tangan bersaiz 4–5 cm</strong> (bernilai RM 24+ jika dibeli berasingan) pada harga <strong>RM 22.00</strong> sahaja!',
+                bbRewardTitle: 'Dapat Capybara Misteri & Menang Ganjaran!',
+                bbRewardDesc: 'Jika anda membuka edisi rahsia <strong>Capybara dengan Buah Oren</strong> (berbeza daripada Capybara Coklat Santai biasa), pembelian anda yang <strong>seterusnya</strong> layak mendapat <strong>1 keychain pada harga RM 5.99 sahaja</strong> (terhad kepada 1 unit)!',
+                bbAddBtn: 'Tambah Pek Blind Box (RM 22.00)',
+                bbPackInfo: '3 biji (4–5 cm) di dalam • Peluang dapat Edisi Rahsia!',
+                customTag: 'Dihasilkan Khas Untuk Anda',
+                customTitle: 'Warna Pilihan & Set Hadiah',
+                customDesc: 'Inginkan warna benang tertentu (cth. katak matcha, kucing belang, atau beruang pastel) atau kotak hadiah untuk kawan di UNIMAS? Tempah di bawah!',
+                customPoint1: 'Benang milk cotton lembut & tidak mudah berbulu (standard 4–5 cm)',
+                customPoint2: 'Harga bergantung pada saiz — disahkan oleh penjual selepas tempahan',
+                customPoint3: 'Pilihan kotak hadiah + kad ucapan tulisan tangan',
+                customLabelAnimal: 'Pilih Rekaan Asas Haiwan',
+                customLabelSize: 'Pilihan Saiz',
+                customLabelQty: 'Kuantiti',
+                customLabelColor: 'Warna Benang Pilihan / Nota Khas',
+                customGiftLabel: 'Tambah Kotak Hadiah + Kad Ucapan Tulisan Tangan',
+                customPriceNote: '💡 Harga tempahan khas bergantung pada saiz & perincian — harga tepat akan disahkan oleh penjual di WhatsApp selepas tempahan dihantar.',
+                customAddBtn: 'Masukkan ke Beg',
+                customWaBtn: 'Tanya di WhatsApp',
+                aboutTag: 'Kisah & Penjagaan',
+                aboutTitle: 'Kenapa Pilih Elung Mas?',
+                aboutDesc: 'Bermula di UNIMAS, Kota Samarahan, Sarawak, Elung Mas membawakan keychain kait comel 4–5 cm pada harga mesra pelajar.',
+                card1Title: '100% Kait Tangan',
+                card1Desc: 'Bukan produk kilang—setiap jahitan, pipi merah jambu, dan telinga kecil dijahit tangan dengan penuh teliti dalam saiz 4–5 cm.',
+                card2Title: 'COD Kampus UNIMAS',
+                card2Desc: 'Ambil sendiri / COD percuma sekitar UNIMAS & Kota Samarahan! Mudah diambil di Kolej atau Student Pavilion anda.',
+                card3Title: 'Cara Penjagaan Mudah',
+                card3Desc: 'Basuh tangan secara lembut dengan air sejuk dan sabun ringan jika berhabuk, lap dengan tuala dan jemur di tempat teduh.',
+                footerDesc: 'Keychain haiwan kait 4–5 cm & Mystery Blind Box buatan tangan dari UNIMAS, Kota Samarahan, Sarawak. Terus tempah melalui WhatsApp!',
+                copyBtn: 'Salin Nombor',
+                footerLinksTitle: 'Pautan Pantas',
+                footerLocationTitle: 'Pengambilan / COD Kampus',
+                footerLocationDesc: '📍 UNIMAS, Kota Samarahan, Sarawak<br>🤝 COD / Jumpa percuma sekitar kampus & Kota Samarahan',
+                cartTitle: 'Beg Tempahan Anda',
+                cartEmptyTitle: 'Beg anda masih kosong!',
+                cartEmptyDesc: 'Pilih keychain 4–5 cm comel atau pek Mystery Blind Box (RM 22) untuk mula menempah.',
+                rewardCheckTitle: '🍊 Ganjaran Pemenang Capybara Misteri (RM 5.99)',
+                rewardCheckDesc: 'Guna harga promo RM 5.99 untuk 1 keychain biasa (jimat RM 2.01; sahkan gambar di WhatsApp).',
+                rewardDiscountLabel: '🍊 Promo Capybara Misteri (1 unit @ RM 5.99)',
+                deliveryLabel: 'Cara Pengambilan / COD',
+                subtotalLabel: 'Jumlah Kecil Barang',
+                shippingLabel: 'Caj COD',
+                totalLabel: 'Jumlah Keseluruhan',
+                checkoutWaBtn: 'Hantar Pesanan ke WhatsApp (016-802 8303)'
+            }
+        };
+
+        // 6 Animal Keychains Catalog (Fixed at RM 8.00, 4–5 cm, distinct names, plain Capybara without orange)
+        const products = [
+            {
+                id: 'capybara',
+                nameEn: 'Chill Brown Capybara',
+                nameBm: 'Capybara Coklat Santai',
+                price: 8.00,
+                bestseller: true,
+                descEn: 'Our signature relaxed brown capybara in a cute 4–5 cm pocket size—smooth, chubby, and super huggable!',
+                descBm: 'Capybara coklat santai ikonik kami dalam saiz poket 4–5 cm yang gebu dan sangat comel!',
+                svg: `
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                    <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                    <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                    <circle cx="62" cy="74" r="13" fill="#6F4518"/>
+                    <circle cx="138" cy="74" r="13" fill="#6F4518"/>
+                    <rect x="46" y="64" width="108" height="96" rx="44" fill="#A47148" stroke="#7F4F24" stroke-width="2.5"/>
+                    <path d="M58 92 Q100 100 142 92 M54 114 Q100 122 146 114 M60 136 Q100 144 140 136" fill="none" stroke="#7F4F24" stroke-width="2" stroke-dasharray="6,6" opacity="0.6"/>
+                    <ellipse cx="100" cy="112" rx="28" ry="21" fill="#6F4518"/>
+                    <path d="M100 104 L100 119 M91 105 Q100 110 109 105" fill="none" stroke="#231712" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="68" cy="102" r="5" fill="#231712"/>
+                    <circle cx="66.5" cy="100.5" r="1.5" fill="#FFF"/>
+                    <circle cx="132" cy="102" r="5" fill="#231712"/>
+                    <circle cx="130.5" cy="100.5" r="1.5" fill="#FFF"/>
+                    <ellipse cx="60" cy="115" rx="8" ry="5" fill="#F28482" opacity="0.75"/>
+                    <ellipse cx="140" cy="115" rx="8" ry="5" fill="#F28482" opacity="0.75"/>
+                </svg>`
+            },
+            {
+                id: 'cat',
+                nameEn: 'Ginger Tabby Cat',
+                nameBm: 'Kucing Oyen Comel',
+                price: 8.00,
+                bestseller: false,
+                descEn: 'Sweet ginger tabby kitty ("Oyen") with striped forehead, pink inner ears, and tiny whiskers.',
+                descBm: 'Kucing Oyen manja dengan corak belang di dahi, telinga dalam merah jambu dan misai comel.',
+                svg: `
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                    <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                    <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                    <polygon points="52,78 60,42 86,64" fill="#F4A261" stroke="#E76F51" stroke-width="2.5" stroke-linejoin="round"/>
+                    <polygon points="60,73 64,51 80,65" fill="#F4978E"/>
+                    <polygon points="148,78 140,42 114,64" fill="#F4A261" stroke="#E76F51" stroke-width="2.5" stroke-linejoin="round"/>
+                    <polygon points="140,73 136,51 120,65" fill="#F4978E"/>
+                    <ellipse cx="100" cy="112" rx="56" ry="50" fill="#F4A261" stroke="#E76F51" stroke-width="2.5"/>
+                    <path d="M90 65 L92 77 M100 63 L100 79 M110 65 L108 77" stroke="#D65A00" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M56 105 Q100 113 144 105 M58 128 Q100 136 142 128" fill="none" stroke="#E76F51" stroke-width="2" stroke-dasharray="6,6" opacity="0.6"/>
+                    <circle cx="76" cy="104" r="5.5" fill="#2B1E1F"/>
+                    <circle cx="74" cy="102" r="1.8" fill="#FFF"/>
+                    <circle cx="124" cy="104" r="5.5" fill="#2B1E1F"/>
+                    <circle cx="122" cy="102" r="1.8" fill="#FFF"/>
+                    <path d="M93 113 Q96.5 118 100 113 Q103.5 118 107 113" fill="none" stroke="#2B1E1F" stroke-width="2.5" stroke-linecap="round"/>
+                    <ellipse cx="66" cy="115" rx="8" ry="4.5" fill="#E63946" opacity="0.35"/>
+                    <ellipse cx="134" cy="115" rx="8" ry="4.5" fill="#E63946" opacity="0.35"/>
+                    <line x1="42" y1="106" x2="56" y2="108" stroke="#9C6644" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="42" y1="115" x2="56" y2="114" stroke="#9C6644" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="158" y1="106" x2="144" y2="108" stroke="#9C6644" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="158" y1="115" x2="144" y2="114" stroke="#9C6644" stroke-width="2" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'bear',
+                nameEn: 'Honey Teddy Bear',
+                nameBm: 'Beruang Teddy Madu',
+                price: 8.00,
+                bestseller: false,
+                descEn: 'Sweet honey-caramel teddy bear with round inner ears and a cute peach ribbon bow.',
+                descBm: 'Beruang teddy madu karamel dengan telinga bulat comel dan reben merah jambu di leher.',
+                svg: `
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                    <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                    <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                    <circle cx="62" cy="64" r="16" fill="#C68B59" stroke="#8D5524" stroke-width="2.5"/>
+                    <circle cx="62" cy="64" r="8" fill="#F3D5B5"/>
+                    <circle cx="138" cy="64" r="16" fill="#C68B59" stroke="#8D5524" stroke-width="2.5"/>
+                    <circle cx="138" cy="64" r="8" fill="#F3D5B5"/>
+                    <ellipse cx="100" cy="112" rx="56" ry="50" fill="#C68B59" stroke="#8D5524" stroke-width="2.5"/>
+                    <path d="M58 92 Q100 100 142 92 M54 114 Q100 122 146 114 M60 136 Q100 144 140 136" fill="none" stroke="#8D5524" stroke-width="2" stroke-dasharray="6,6" opacity="0.6"/>
+                    <ellipse cx="100" cy="112" rx="22" ry="17" fill="#FFF1E6"/>
+                    <ellipse cx="100" cy="106" rx="6" ry="4" fill="#3D2C2E"/>
+                    <path d="M100 110 L100 118 M93 116 Q100 121 107 116" fill="none" stroke="#3D2C2E" stroke-width="2.2" stroke-linecap="round"/>
+                    <circle cx="74" cy="98" r="5" fill="#2B1E1F"/>
+                    <circle cx="72.5" cy="96.5" r="1.5" fill="#FFF"/>
+                    <circle cx="126" cy="98" r="5" fill="#2B1E1F"/>
+                    <circle cx="124.5" cy="96.5" r="1.5" fill="#FFF"/>
+                    <ellipse cx="64" cy="110" rx="8" ry="4.5" fill="#E07A5F" opacity="0.5"/>
+                    <ellipse cx="136" cy="110" rx="8" ry="4.5" fill="#E07A5F" opacity="0.5"/>
+                    <polygon points="100,142 84,133 84,151" fill="#E07A5F"/>
+                    <polygon points="100,142 116,133 116,151" fill="#E07A5F"/>
+                    <circle cx="100" cy="142" r="4.5" fill="#F2CC8F"/>
+                </svg>`
+            },
+            {
+                id: 'pig',
+                nameEn: 'Chubby Pink Piggy',
+                nameBm: 'Anak Babi Pink',
+                price: 8.00,
+                bestseller: false,
+                descEn: 'Soft pastel pink knitted piggy with cute snout, floppy ears, and rosy cheeks.',
+                descBm: 'Anak babi kait warna merah jambu pastel yang gebu dengan hidung comel dan pipi merah.',
+                svg: `
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                    <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                    <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                    <path d="M58 64 Q44 42 74 52 Z" fill="#F4978E" stroke="#E07A5F" stroke-width="2.5"/>
+                    <path d="M142 64 Q156 42 126 52 Z" fill="#F4978E" stroke="#E07A5F" stroke-width="2.5"/>
+                    <ellipse cx="100" cy="112" rx="56" ry="52" fill="#F8AD9D" stroke="#E07A5F" stroke-width="2.5"/>
+                    <path d="M65 85 Q100 92 135 85 M56 105 Q100 113 144 105 M58 125 Q100 133 142 125 M68 143 Q100 150 132 143" fill="none" stroke="#F08080" stroke-width="2" stroke-dasharray="6,6" opacity="0.65"/>
+                    <ellipse cx="100" cy="116" rx="20" ry="14" fill="#F4978E" stroke="#D66853" stroke-width="2"/>
+                    <circle cx="93" cy="116" r="3" fill="#6D3B3B"/>
+                    <circle cx="107" cy="116" r="3" fill="#6D3B3B"/>
+                    <circle cx="74" cy="102" r="5" fill="#2B1E1F"/>
+                    <circle cx="72.5" cy="100.5" r="1.5" fill="#FFF"/>
+                    <circle cx="126" cy="102" r="5" fill="#2B1E1F"/>
+                    <circle cx="124.5" cy="100.5" r="1.5" fill="#FFF"/>
+                    <ellipse cx="64" cy="116" rx="8" ry="5" fill="#E63946" opacity="0.35"/>
+                    <ellipse cx="136" cy="116" rx="8" ry="5" fill="#E63946" opacity="0.35"/>
+                    <ellipse cx="78" cy="162" rx="12" ry="8" fill="#F4978E" stroke="#E07A5F" stroke-width="2"/>
+                    <ellipse cx="122" cy="162" rx="12" ry="8" fill="#F4978E" stroke="#E07A5F" stroke-width="2"/>
+                </svg>`
+            },
+            {
+                id: 'frog',
+                nameEn: 'Happy Green Frog',
+                nameBm: 'Katak Hijau Ceria',
+                price: 8.00,
+                bestseller: false,
+                descEn: 'Big-eyed cheerful green frog crocheted with cozy sage-lime milk cotton yarn.',
+                descBm: 'Katak hijau bermata besar yang ceria dikait menggunakan benang milk cotton hijau lembut.',
+                svg: `
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                    <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                    <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                    <circle cx="72" cy="66" r="18" fill="#95D5B2" stroke="#52B788" stroke-width="2.5"/>
+                    <circle cx="128" cy="66" r="18" fill="#95D5B2" stroke="#52B788" stroke-width="2.5"/>
+                    <circle cx="72" cy="66" r="11" fill="#FFFDF9"/>
+                    <circle cx="128" cy="66" r="11" fill="#FFFDF9"/>
+                    <circle cx="74" cy="66" r="6" fill="#2B1E1F"/>
+                    <circle cx="126" cy="66" r="6" fill="#2B1E1F"/>
+                    <ellipse cx="100" cy="116" rx="58" ry="48" fill="#95D5B2" stroke="#52B788" stroke-width="2.5"/>
+                    <path d="M58 95 Q100 103 142 95 M50 115 Q100 123 150 115 M56 135 Q100 143 144 135" fill="none" stroke="#52B788" stroke-width="2" stroke-dasharray="6,6" opacity="0.6"/>
+                    <ellipse cx="100" cy="132" rx="30" ry="22" fill="#D8F3DC"/>
+                    <path d="M86 102 Q100 114 114 102" fill="none" stroke="#2D6A4F" stroke-width="3" stroke-linecap="round"/>
+                    <ellipse cx="66" cy="102" rx="9" ry="5" fill="#F28482" opacity="0.65"/>
+                    <ellipse cx="134" cy="102" rx="9" ry="5" fill="#F28482" opacity="0.65"/>
+                    <ellipse cx="76" cy="162" rx="13" ry="7" fill="#74C69D" stroke="#52B788" stroke-width="2"/>
+                    <ellipse cx="124" cy="162" rx="13" ry="7" fill="#74C69D" stroke="#52B788" stroke-width="2"/>
+                </svg>`
+            },
+            {
+                id: 'chick',
+                nameEn: 'Little Yellow Chick',
+                nameBm: 'Anak Ayam Kuning',
+                price: 8.00,
+                bestseller: false,
+                descEn: 'Sunny yellow chubby chick with tiny wings and an orange beak—cute & pocket-friendly!',
+                descBm: 'Anak ayam kuning gebu dengan kepak kecil dan paruh oren—comel dan harga sangat berpatutan!',
+                svg: `
+                <svg viewBox="0 0 200 200" class="w-full h-full">
+                    <circle cx="100" cy="22" r="10" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+                    <rect x="96" y="31" width="8" height="14" rx="4" fill="#D4AF37"/>
+                    <path d="M96 58 Q92 44 100 52 Q108 42 105 58" fill="none" stroke="#E09F3E" stroke-width="3" stroke-linecap="round"/>
+                    <ellipse cx="44" cy="114" rx="12" ry="18" fill="#F2CC8F" stroke="#E09F3E" stroke-width="2.5" transform="rotate(20 44 114)"/>
+                    <ellipse cx="156" cy="114" rx="12" ry="18" fill="#F2CC8F" stroke="#E09F3E" stroke-width="2.5" transform="rotate(-20 156 114)"/>
+                    <ellipse cx="100" cy="112" rx="54" ry="52" fill="#FFE169" stroke="#E09F3E" stroke-width="2.5"/>
+                    <path d="M62 88 Q100 96 138 88 M54 110 Q100 118 146 110 M60 132 Q100 140 140 132" fill="none" stroke="#E09F3E" stroke-width="2" stroke-dasharray="6,6" opacity="0.6"/>
+                    <ellipse cx="100" cy="112" rx="11" ry="7" fill="#F77F00"/>
+                    <line x1="90" y1="112" x2="110" y2="112" stroke="#D65A00" stroke-width="1.5"/>
+                    <circle cx="76" cy="100" r="5" fill="#2B1E1F"/>
+                    <circle cx="74.5" cy="98.5" r="1.5" fill="#FFF"/>
+                    <circle cx="124" cy="100" r="5" fill="#2B1E1F"/>
+                    <circle cx="122.5" cy="98.5" r="1.5" fill="#FFF"/>
+                    <ellipse cx="66" cy="112" rx="8" ry="4.5" fill="#F28482" opacity="0.6"/>
+                    <ellipse cx="134" cy="112" rx="8" ry="4.5" fill="#F28482" opacity="0.6"/>
+                    <path d="M80 162 L74 168 M80 162 L80 169 M80 162 L86 168" stroke="#F77F00" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M120 162 L114 168 M120 162 L120 169 M120 162 L126 168" stroke="#F77F00" stroke-width="3" stroke-linecap="round"/>
+                </svg>`
+            }
+        ];
+
+        // Shopping Cart State
+        let cart = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            applySavedAvatar();
+            renderProducts();
+            renderCart();
+        });
+
+        // Filter Handler
+        function setFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-espresso', 'text-cream');
+                btn.classList.add('bg-beige', 'text-espresso');
+            });
+            const activeBtn = document.getElementById(`filter-${filter}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-beige', 'text-espresso');
+                activeBtn.classList.add('bg-espresso', 'text-cream');
+            }
+            renderProducts();
+        }
+
+        // Render Product Grid
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const t = i18n[currentLang];
+
+            const filtered = products.filter(item => {
+                if (currentFilter === 'bestseller') return item.bestseller;
+                return true;
+            });
+
+            grid.innerHTML = filtered.map(item => {
+                const name = currentLang === 'en' ? item.nameEn : item.nameBm;
+                const desc = currentLang === 'en' ? item.descEn : item.descBm;
+
+                return `
+                <div class="bg-cream rounded-3xl border border-sand shadow-soft hover:shadow-card transition-all duration-300 flex flex-col overflow-hidden group">
+                    <!-- Animal Illustration Container -->
+                    <div class="relative bg-beige/70 p-6 flex items-center justify-center h-56 border-b border-sand/60">
+                        ${item.bestseller ? `
+                        <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-peach text-white text-xs font-bold shadow-xs flex items-center gap-1">
+                            <span>🔥</span> ${t.bestseller}
+                        </span>` : ''}
+                        <span class="absolute top-3.5 right-3.5 px-3 py-1 rounded-full bg-cream/95 text-espresso text-sm font-bold border border-sand shadow-xs">
+                            RM ${item.price.toFixed(2)}
+                        </span>
+                        <div class="w-40 h-40 group-hover:scale-105 transition-transform duration-300">
+                            ${item.svg}
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-1.5">
+                            <span class="text-[11px] font-bold text-caramel uppercase tracking-wider">${t.specMaterial}</span>
+                            <h3 class="text-lg font-bold text-espresso leading-snug">${name}</h3>
+                            <p class="text-xs sm:text-sm text-espresso/75 leading-relaxed">${desc}</p>
+                        </div>
+
+                        <div class="pt-2 border-t border-sand/70">
+                            <button onclick="addToBag('${item.id}')" class="w-full py-2.5 px-4 rounded-xl bg-espresso hover:bg-peach text-cream font-bold text-sm transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                                <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                                <span>${t.addToBag}</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        // Add Standard Animal Keychain to Bag
+        function addToBag(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    type: 'regular',
+                    nameEn: product.nameEn,
+                    nameBm: product.nameBm,
+                    price: product.price,
+                    isCustomQuote: false,
+                    option: '4–5 cm',
+                    qty: 1
+                });
+            }
+
+            renderCart();
+            showToast(currentLang === 'en'
+                ? `Added ${product.nameEn} to bag!`
+                : `${product.nameBm} ditambah ke beg!`);
+        }
+
+        // Add Mystery Blind Box Pack (RM 22.00) to Bag
+        function addBlindBoxToBag() {
+            const existing = cart.find(item => item.id === 'blindbox-pack');
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({
+                    id: 'blindbox-pack',
+                    type: 'blindbox',
+                    nameEn: 'Mystery Blind Box Pack (3 Keychains)',
+                    nameBm: 'Pek Mystery Blind Box (3 Keychain)',
+                    price: 22.00,
+                    isCustomQuote: false,
+                    option: '3 random 4–5 cm pcs • Secret Orange Capybara chance',
+                    qty: 1
+                });
+            }
+
+            renderCart();
+            toggleCart(true);
+            showToast(currentLang === 'en'
+                ? 'Mystery Blind Box (RM 22) added to bag!'
+                : 'Mystery Blind Box (RM 22) ditambah ke beg!');
+        }
+
+        // Add Custom Keychain to Bag
+        function addCustomToBag() {
+            const baseSelect = document.getElementById('customBaseSelect');
+            const baseVal = baseSelect.value;
+            const sizeSelect = document.getElementById('customSizeSelect');
+            const selectedSizeOpt = sizeSelect.options[sizeSelect.selectedIndex];
+            const sizeVal = currentLang === 'bm'
+                ? (selectedSizeOpt.getAttribute('data-bm') || sizeSelect.value)
+                : (selectedSizeOpt.getAttribute('data-en') || sizeSelect.value);
+            const colorNote = document.getElementById('customColorInput').value.trim();
+            const qty = Math.max(1, parseInt(document.getElementById('customQtyInput').value) || 1);
+            const addGiftBox = document.getElementById('customGiftBoxCheck').checked;
+
+            const details = [
+                `Size: ${sizeVal}`,
+                colorNote ? `Color/Note: ${colorNote}` : 'Standard Color',
+                addGiftBox ? 'Gift Box + Card' : ''
+            ].filter(Boolean).join(' • ');
+
+            cart.push({
+                id: 'custom-' + Date.now(),
+                type: 'custom',
+                nameEn: `Custom: ${baseVal}`,
+                nameBm: `Tempahan Khas: ${baseVal}`,
+                price: 0,
+                isCustomQuote: true,
+                option: details,
+                qty: qty
+            });
+
+            renderCart();
+            toggleCart(true);
+            showToast(currentLang === 'en' ? 'Custom item added to bag!' : 'Tempahan khas ditambah ke beg!');
+        }
+
+        function updateQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cartItemsContainer');
+            const badge = document.getElementById('cartBadge');
+            const subtotalDisplay = document.getElementById('cartSubtotalDisplay');
+            const shippingDisplay = document.getElementById('cartShippingDisplay');
+            const totalDisplay = document.getElementById('cartTotalDisplay');
+            const deliverySelect = document.getElementById('deliveryMethodSelect');
+            const rewardCheck = document.getElementById('mysteryRewardCheck');
+            const rewardDiscountRow = document.getElementById('rewardDiscountRow');
+            const t = i18n[currentLang];
+
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const hasCustomQuote = cart.some(item => item.isCustomQuote);
+            const hasRegularItem = cart.some(item => item.type === 'regular' && item.qty > 0);
+            const itemsSubtotal = cart.reduce((sum, item) => sum + (item.isCustomQuote ? 0 : item.price * item.qty), 0);
+
+            // Calculate Mystery Capybara Reward (1 regular RM 8.00 item becomes RM 5.99 -> RM 2.01 discount)
+            const applyReward = rewardCheck && rewardCheck.checked && hasRegularItem;
+            const discountAmount = applyReward ? 2.01 : 0;
+
+            if (rewardDiscountRow) {
+                if (applyReward) {
+                    rewardDiscountRow.classList.remove('hidden');
+                } else {
+                    rewardDiscountRow.classList.add('hidden');
+                }
+            }
+            
+            let shippingFee = 0;
+            if (cart.length > 0 && deliverySelect) {
+                const selectedOpt = deliverySelect.options[deliverySelect.selectedIndex];
+                shippingFee = parseFloat(selectedOpt.getAttribute('data-fee')) || 0;
+            }
+
+            const grandTotal = Math.max(0, itemsSubtotal - discountAmount + shippingFee);
+            const tbcLabel = currentLang === 'bm' ? 'Disahkan oleh penjual' : 'TBC by seller';
+
+            badge.textContent = totalQty;
+            subtotalDisplay.textContent = hasCustomQuote
+                ? (itemsSubtotal > 0 ? `RM ${itemsSubtotal.toFixed(2)} + ${tbcLabel}` : tbcLabel)
+                : `RM ${itemsSubtotal.toFixed(2)}`;
+            shippingDisplay.textContent = shippingFee === 0 ? 'RM 0.00 (Free)' : `RM ${shippingFee.toFixed(2)}`;
+            totalDisplay.textContent = hasCustomQuote
+                ? (grandTotal > 0 ? `RM ${grandTotal.toFixed(2)} + ${tbcLabel}` : tbcLabel)
+                : `RM ${grandTotal.toFixed(2)}`;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center text-center py-12 text-espresso/60 space-y-3">
+                        <div class="w-16 h-16 rounded-full bg-beige flex items-center justify-center text-caramel">
+                            <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+                        </div>
+                        <p class="font-bold text-base text-espresso">${t.cartEmptyTitle}</p>
+                        <p class="text-xs max-w-xs">${t.cartEmptyDesc}</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = cart.map((item, idx) => {
+                    const title = currentLang === 'en' ? item.nameEn : item.nameBm;
+                    const priceText = item.isCustomQuote
+                        ? (currentLang === 'bm' ? 'Harga mengikut saiz (Disahkan penjual)' : 'Price based on size (Seller to confirm)')
+                        : `RM ${(item.price * item.qty).toFixed(2)}`;
+                    return `
+                    <div class="bg-beige/60 rounded-2xl p-3.5 border border-sand flex items-center justify-between gap-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-espresso">${title}</h4>
+                            ${item.option ? `
+                            <span class="inline-block text-[11px] font-semibold text-caramel bg-cream px-2 py-0.5 rounded-full border border-sand mt-1">
+                                ${item.option}
+                            </span>` : ''}
+                            <div class="text-xs font-bold text-peach mt-1">${priceText}</div>
+                        </div>
+
+                        <div class="flex items-center gap-2 bg-cream rounded-full px-2 py-1 border border-sand">
+                            <button onclick="updateQty(${idx}, -1)" class="w-6 h-6 rounded-full hover:bg-beige flex items-center justify-center font-bold text-espresso cursor-pointer">-</button>
+                            <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
+                            <button onclick="updateQty(${idx}, 1)" class="w-6 h-6 rounded-full hover:bg-beige flex items-center justify-center font-bold text-espresso cursor-pointer">+</button>
+                        </div>
+                    </div>
+                    `;
+                }).join('');
+            }
+
+            lucide.createIcons();
+        }
+
+        function toggleCart(open) {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('cartOverlay');
+            if (open) {
+                overlay.classList.remove('hidden');
+                drawer.classList.remove('translate-x-full');
+            } else {
+                overlay.classList.add('hidden');
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        // Direct WhatsApp Checkout -> https://wa.me/60168028303
+        function buildWhatsAppOrderUrl() {
+            const customerName = document.getElementById('customerNameInput').value.trim();
+            const customerNote = document.getElementById('customerNoteInput').value.trim();
+            const deliverySelect = document.getElementById('deliveryMethodSelect');
+            const selectedOpt = deliverySelect.options[deliverySelect.selectedIndex];
+            const deliveryMethod = currentLang === 'bm'
+                ? (selectedOpt.getAttribute('data-bm') || deliverySelect.value)
+                : (selectedOpt.getAttribute('data-en') || deliverySelect.value);
+            const shippingFee = parseFloat(selectedOpt.getAttribute('data-fee')) || 0;
+            const hasCustomQuote = cart.some(item => item.isCustomQuote);
+            const hasRegularItem = cart.some(item => item.type === 'regular' && item.qty > 0);
+            const rewardChecked = document.getElementById('mysteryRewardCheck').checked;
+            const applyReward = rewardChecked && hasRegularItem;
+            const discountAmount = applyReward ? 2.01 : 0;
+
+            const itemsSubtotal = cart.reduce((sum, item) => sum + (item.isCustomQuote ? 0 : item.price * item.qty), 0);
+            const grandTotal = Math.max(0, itemsSubtotal - discountAmount + shippingFee);
+
+            let lines = [];
+
+            if (currentLang === 'bm') {
+                lines.push(`Hai *Elung Mas*! 🧶✨ Saya ingin membuat tempahan keychain kait:`);
+                if (customerName) lines.push(`• *Nama:* ${customerName}`);
+                if (customerNote) lines.push(`• *Kolej / Nota:* ${customerNote}`);
+                lines.push(``);
+                lines.push(`*Senarai Tempahan:*`);
+                cart.forEach((item, i) => {
+                    const optText = item.option ? ` (${item.option})` : '';
+                    const itemPriceStr = item.isCustomQuote
+                        ? 'Harga mengikut saiz (Mohon penjual sahkan)'
+                        : `RM ${(item.price * item.qty).toFixed(2)}`;
+                    lines.push(`${i + 1}. *${item.nameBm}*${optText} x${item.qty} = ${itemPriceStr}`);
+                });
+                lines.push(``);
+                if (applyReward) {
+                    lines.push(`• *Ganjaran Capybara Misteri:* 1 unit pada harga promo *RM 5.99* (-RM 2.01) 🍊`);
+                } else if (rewardChecked && !hasRegularItem) {
+                    lines.push(`• *Nota Ganjaran Capybara Misteri:* Ditebus (sah untuk 1 keychain biasa RM 5.99) 🍊`);
+                }
+                lines.push(`• *Cara Penghantaran:* ${deliveryMethod}`);
+                const totalStrBm = hasCustomQuote
+                    ? (grandTotal > 0 ? `RM ${grandTotal.toFixed(2)} + Harga tempahan khas (Disahkan penjual)` : `Mengikut saiz (Disahkan oleh penjual)`)
+                    : `RM ${grandTotal.toFixed(2)}`;
+                lines.push(`• *Jumlah Keseluruhan:* ${totalStrBm}`);
+                lines.push(``);
+                lines.push(`Mohon sahkan stok & maklumat pembayaran. Terima kasih! 💕`);
+            } else {
+                lines.push(`Hello *Elung Mas*! 🧶✨ I would like to place a crochet keychain order:`);
+                if (customerName) lines.push(`• *Name:* ${customerName}`);
+                if (customerNote) lines.push(`• *Kolej / Note:* ${customerNote}`);
+                lines.push(``);
+                lines.push(`*Order Items:*`);
+                cart.forEach((item, i) => {
+                    const optText = item.option ? ` (${item.option})` : '';
+                    const itemPriceStr = item.isCustomQuote
+                        ? 'Price based on size (Seller to confirm)'
+                        : `RM ${(item.price * item.qty).toFixed(2)}`;
+                    lines.push(`${i + 1}. *${item.nameEn}*${optText} x${item.qty} = ${itemPriceStr}`);
+                });
+                lines.push(``);
+                if (applyReward) {
+                    lines.push(`• *Mystery Capybara Reward:* 1 regular keychain @ *RM 5.99* (-RM 2.01) 🍊`);
+                } else if (rewardChecked && !hasRegularItem) {
+                    lines.push(`• *Mystery Capybara Reward Note:* Claiming RM 5.99 promo on 1 regular keychain 🍊`);
+                }
+                lines.push(`• *Delivery Preference:* ${deliveryMethod}`);
+                const totalStrEn = hasCustomQuote
+                    ? (grandTotal > 0 ? `RM ${grandTotal.toFixed(2)} + Custom item quote (Seller to confirm)` : `Based on size (To be confirmed by seller)`)
+                    : `RM ${grandTotal.toFixed(2)}`;
+                lines.push(`• *Total Amount:* ${totalStrEn}`);
+                lines.push(``);
+                lines.push(`Please confirm availability & payment details. Thank you! 💕`);
+            }
+
+            return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('
+'))}`;
+        }
+
+        function checkoutViaWhatsApp(event) {
+            if (cart.length === 0) {
+                if (event) event.preventDefault();
+                showToast(currentLang === 'en' ? 'Please add at least 1 item first!' : 'Sila tambah sekurang-kurangnya 1 item dahulu!');
+                return false;
+            }
+
+            const url = buildWhatsAppOrderUrl();
+            const linkEl = document.getElementById('whatsappCheckoutLink');
+            if (linkEl) linkEl.href = url;
+
+            showToast(currentLang === 'en' ? 'Opening WhatsApp with your order...' : 'Membuka WhatsApp dengan pesanan anda...');
+            return true;
+        }
+
+        // Send Custom Inquiry via WhatsApp
+        function sendCustomWhatsApp() {
+            const baseDesign = document.getElementById('customBaseSelect').value;
+            const sizeSelect = document.getElementById('customSizeSelect');
+            const selectedSizeOpt = sizeSelect.options[sizeSelect.selectedIndex];
+            const sizeText = currentLang === 'bm'
+                ? (selectedSizeOpt.getAttribute('data-bm') || sizeSelect.value)
+                : (selectedSizeOpt.getAttribute('data-en') || sizeSelect.value);
+            const colorNote = document.getElementById('customColorInput').value.trim() || 'Standard';
+            const qty = document.getElementById('customQtyInput').value || '1';
+            const giftBox = document.getElementById('customGiftBoxCheck').checked ? 'Yes' : 'No';
+
+            const message = currentLang === 'bm'
+                ? `Hai *Elung Mas*! 🧶✨ Saya ingin membuat *Tempahan Khas (Custom Order)*:
+
+• *Rekaan:* ${baseDesign}
+• *Saiz:* ${sizeText}
+• *Warna Benang / Nota:* ${colorNote}
+• *Kuantiti:* ${qty} biji
+• *Kotak Hadiah:* ${giftBox}
+
+Mohon maklumkan harga mengikut saiz & tempoh siap. Terima kasih! 💕`
+                : `Hello *Elung Mas*! 🧶✨ I'd like to place a *Custom Crochet Order*:
+
+• *Design:* ${baseDesign}
+• *Size:* ${sizeText}
+• *Yarn Color / Notes:* ${colorNote}
+• *Quantity:* ${qty} pcs
+• *Gift Box:* ${giftBox}
+
+Please confirm the price based on size and lead time. Thank you! 💕`;
+
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Direct WhatsApp Chat
+        function openDirectWhatsApp() {
+            const msg = currentLang === 'bm'
+                ? "Hai Elung Mas! 🧶 Saya berminat dengan keychain kait 4–5 cm & Mystery Blind Box anda."
+                : "Hello Elung Mas! 🧶 I'm interested in your 4–5 cm handmade crochet keychains & Mystery Blind Box.";
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // Copy Phone Number (0168028303)
+        function copyPhoneNumber() {
+            const tempInput = document.createElement('input');
+            tempInput.value = DISPLAY_PHONE;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(currentLang === 'en' ? 'Copied 0168028303!' : 'Nombor 0168028303 disalin!');
+        }
+
+        // Toggle Bilingual English (EN) / Bahasa Melayu (BM)
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'bm' : 'en';
+            document.getElementById('langLabel').textContent = currentLang === 'en' ? 'BM' : 'EN';
+
+            const t = i18n[currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            const deliverySelect = document.getElementById('deliveryMethodSelect');
+            if (deliverySelect) {
+                Array.from(deliverySelect.options).forEach(opt => {
+                    const label = opt.getAttribute(`data-${currentLang}`);
+                    if (label) opt.textContent = label;
+                });
+            }
+
+            const customSizeSelect = document.getElementById('customSizeSelect');
+            if (customSizeSelect) {
+                Array.from(customSizeSelect.options).forEach(opt => {
+                    const label = opt.getAttribute(`data-${currentLang}`);
+                    if (label) opt.textContent = label;
+                });
+            }
+
+            renderProducts();
+            renderCart();
+        }
+
+        // Owner Custom Avatar Preview Uploader
+        function handleLogoUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const dataUrl = e.target.result;
+                try {
+                    localStorage.setItem('elungMasCustomAvatar', dataUrl);
+                } catch (err) {}
+                displayCustomAvatar(dataUrl);
+                showToast(currentLang === 'en' ? 'Elung Mas avatar updated!' : 'Logo Elung Mas dikemas kini!');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function applySavedAvatar() {
+            const saved = localStorage.getItem('elungMasCustomAvatar');
+            if (saved) displayCustomAvatar(saved);
+        }
+
+        function displayCustomAvatar(src) {
+            const heroImg = document.getElementById('heroLogoImg');
+            const heroSvg = document.getElementById('heroLogoSvg');
+            const navImg = document.getElementById('navLogoImg');
+            const navSvg = document.getElementById('navLogoSvg');
+
+            heroImg.src = src;
+            heroImg.classList.remove('hidden');
+            heroSvg.classList.add('hidden');
+
+            navImg.src = src;
+            navImg.classList.remove('hidden');
+            navSvg.classList.add('hidden');
+        }
+
+        function showToast(text) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = text;
+            toast.classList.remove('opacity-0');
+            setTimeout(() => {
+                toast.classList.add('opacity-0');
+            }, 2600);
+        }
+    </script>
+</body>
+</html>
